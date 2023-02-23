@@ -1,7 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+main {
+  width: 100%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  font-size: 5rem;
+  color: #e5e6eb;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: #fafafa;
+  z-index: 9999;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 30%;
+  margin: 2rem 0;
+}
+.box {
+  background-color: white;
+  border: 1px solid #838282;
+  width: 100%;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.box-title,
+.box-desc {
+  margin-bottom: 0.5rem;
+}
+
+.box-title {
+  font-size: 1.2rem;
+  color: #444;
+}
+.box-desc {
+  color: #666;
+  line-height: 1.5;
+}
+.box-spans {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+}
+.span-one {
+  background-color: #f4eaee;
+  padding: 0.3rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.span-two {
+  background-color: #eff3f2;
+  padding: 0.3rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.to-down {
+  position: fixed;
+  top: 85%;
+}
+
+.to-down i {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #606165;
+  color: white;
+  font-size: 1.1rem;
+}
+.add-box {
+  width: 30%;
+  margin: 2rem 0;
+  display: none;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 6px;
+  background-color: #f1efef;
+  padding: 1rem;
+}
+.post .title {
+  font-size: 1.2rem;
+  color: #444;
+}
+.post-title {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e6e3e3;
+}
+
+.post-description {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 6px;
+  resize: none;
+  border: 1px solid #e6e3e3;
+}
+.post-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-icons > :nth-child(1),
+.post-icons > :nth-child(2) {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: black;
+  border: 1px solid black;
+  transition: all 0.2s linear;
+  background-color: white;
+}
+
+.post-icons > :nth-child(1):hover {
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+}
+
+.post-icons > :nth-child(2):hover {
+  background-color: red;
+  border: 1px solid red;
+
+  color: white;
+}
+
+@media only screen and (max-width: 1115px) {
+  .boxes {
+    width: 75%;
+  }
+  .add-box {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .boxes {
+    width: 90%;
+  }
+  .add-box {
+    width: 90%;
+  }
 }
